@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+int main()
+{
+    double L=0.65, W=280*acos(-1)/180, t=0.01, a, w, X, Y, U1;
+    int U=220, R=30, f=50;
+    w=2*acos(-1)*f;
+    a=atan(w*L/R);
+    X=sin(a)*sin(w*t+W-a+acos(-1)/2);
+    Y=cos(a)*sin(W-a)*exp(-(t*R/L));
+    U1=U*(X+Y);
+    cout<<"U1="<<setw(2)<<setprecision(15)<<U1;
+    return 0;
+}
