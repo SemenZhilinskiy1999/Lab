@@ -1,0 +1,42 @@
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+int main()
+{
+	 setlocale(0,"Russian");
+    double u1=0.9,u2=0.6,d1=3.5,h1=5,h=1,g=9.8,d2[5] = {3,5,7,10,15},Q1,Q2,A,h2;
+    for(int i = 0; i < 5; ++i)
+    {
+        cout<<"               q="<<setw(1)<<setprecision(4)<<d2[5]
+        ;
+       d2[i] = (u1*d1*d1)/(u2*d2[i]*d2[i])*(u1*d1*d1)/(u2*d2[i]*d2[i]);
+    }
+    for(int i = 0; i < 5; ++i)
+    {
+       cout<<"             A="<<setw(1)<<setprecision(4)<<d2[5];
+       d2[i] = (acos(-1)*u1*d1*sqrt(2*g*h1-h))/(4);
+    }
+    
+    for(int i = 0; i < 5; ++i)
+    {
+       cout<<"             Q1="<<setw(1)<<setprecision(4)<<d2[5];
+       d2[i] = (acos(-1)*u2*d2[5]*sqrt(2*g*h))/(4);
+    }
+    for(int i = 0; i < 5; ++i)
+       cout<<"             Q2="<<setw(1)<<setprecision(4)<<d2[5];
+       cout << "Vvedite znachenie A: ";
+        cin >> A;
+        if(Q1 < Q2) 
+    {
+       h2 = A*(h1-h);
+        cout<<"             h2="<<setw(1)<<setprecision(4)<<h2;
+    }
+    if(Q1 > Q2)  
+    {
+       h2 = (A*h1)/(1+A);
+       cout<<"             h2="<<setw(1)<<setprecision(4)<<h2;
+    }
+    return 0;
+}
